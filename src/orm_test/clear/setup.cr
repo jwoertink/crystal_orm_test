@@ -1,10 +1,11 @@
 module OrmTestClear
   extend self
 
-  Clear::SQL.init("postgres://postgres@localhost/crystal_orm_test")
+  Clear::SQL.init("postgres://#{DATABASE[:user]}@#{DATABASE[:host]}/#{DATABASE[:name]}")
 
   class User
     include Clear::Model
+    self.table = "users"
 
     column id : Int64, primary: true
     column name : String

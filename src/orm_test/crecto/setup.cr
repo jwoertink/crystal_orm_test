@@ -6,8 +6,10 @@ module OrmTestCrecto
 
     config do |conf|
       conf.adapter = Crecto::Adapters::Postgres
-      conf.hostname = "localhost"
-      conf.database = "crystal_orm_test"
+      conf.hostname = DATABASE[:host]
+      conf.database = DATABASE[:name]
+      conf.username = DATABASE[:user]
+      conf.password = ""
     end
   end
 
