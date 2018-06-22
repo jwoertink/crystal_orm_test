@@ -12,7 +12,7 @@ read -r -d '' STR << SQL
 BEGIN;
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users(
-  id BIGSERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   name character varying NOT NULL,
   created_at timestamp without time zone,
   updated_at timestamp without time zone

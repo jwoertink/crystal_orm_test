@@ -7,7 +7,7 @@ module OrmTestClear
     include Clear::Model
     self.table = "users"
 
-    column id : Int64, primary: true
+    column id : Int32, primary: true
     column name : String
     column created_at : Time
     column updated_at : Time 

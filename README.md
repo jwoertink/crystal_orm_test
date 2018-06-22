@@ -23,3 +23,7 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 * `./bin/setup`
 * `crystal build --release src/orm_test.cr`
 * `./orm_test`
+
+## ISSUES
+
+1. Update to BIGSERIAL (Int64) once LuckyRecord supports it
