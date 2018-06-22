@@ -1,0 +1,37 @@
+name: orm_test
+version: 0.1.0
+
+authors:
+  - Jeremy Woertink <jeremywoertink@gmail.com>
+
+crystal: 0.25.0
+
+license: MIT
+
+dependencies:
+  pg:
+    github: will/crystal-pg
+
+  jennifer:
+    github: imdrasil/jennifer.cr
+    branch: master
+
+  granite:
+    github: amberframework/granite
+    branch: master
+
+  crecto:
+    github: Crecto/crecto
+    branch: master
+
+  clear:
+    github: anykeyh/clear
+    branch: master
+
+  lucky_record:
+    github: luckyframework/lucky_record
+    branch: master
+
+  core:
+    github: vladfaust/core
+    branch: master
