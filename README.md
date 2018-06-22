@@ -21,4 +21,5 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 * Fork and clone
 * `shards install`
 * `./bin/setup`
-* `crystal something` ??
+* `crystal build --release src/orm_test.cr`
+* `./orm_test`
