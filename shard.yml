@@ -35,3 +35,8 @@ dependencies:
   core:
     github: vladfaust/core
     branch: master
+
+development_dependencies:
+  lucky_inflector:
+    github: luckyframework/lucky_inflector
+    branch: master
