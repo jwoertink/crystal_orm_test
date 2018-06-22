@@ -8,7 +8,7 @@ fi
 echo "DROP DATABASE IF EXISTS crystal_orm_test;" | psql -U postgres
 echo "CREATE DATABASE crystal_orm_test;" | psql -U postgres
 
-sql=<< SQL
+read -r -d '' STR << SQL
 BEGIN;
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users(
@@ -19,4 +19,4 @@ CREATE TABLE users(
 );
 COMMIT;
 SQL
-echo $sql | psql -U postgres
+echo $STR | psql -U postgres crystal_orm_test
