@@ -36,6 +36,12 @@ def bench_simple_insert
         OrmTestCore.simple_insert
       end
     end
+
+    x.report("granite simple_insert") do
+      1000.times do
+        OrmTestGranite.simple_insert
+      end
+    end
   end
 end
 
