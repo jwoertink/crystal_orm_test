@@ -24,11 +24,18 @@ def bench_simple_insert
       end
     end
 
+    # TODO: Add in once crystal 0.25.0 is supported
     #x.report("jennifer simple_insert") do
     #  1000.times do
     #    OrmTestJennifer.simple_insert
     #  end
     #end
+
+    x.report("core simple_insert") do
+      1000.times do
+        OrmTestCore.simple_insert
+      end
+    end
   end
 end
 
