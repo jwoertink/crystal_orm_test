@@ -1,6 +1,7 @@
 /docs/
 /lib/
 /.shards/
+/run
 *.dwarf
 
 # Libraries don't need dependency lock
