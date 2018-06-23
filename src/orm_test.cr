@@ -22,7 +22,13 @@ def bench_simple_insert
       1000.times do
         OrmTestLuckyRecord.simple_insert
       end
-    end    
+    end
+
+    #x.report("jennifer simple_insert") do
+    #  1000.times do
+    #    OrmTestJennifer.simple_insert
+    #  end
+    #end
   end
 end
 

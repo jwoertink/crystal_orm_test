@@ -27,3 +27,4 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 ## ISSUES
 
 1. Update to BIGSERIAL (Int64) once LuckyRecord supports it
+2. Jennifer does not support latest crystal yet
