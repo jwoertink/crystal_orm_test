@@ -9,8 +9,8 @@ module OrmTestCore
       primary_key :id
 
       field :name, String
-      field :created_at, Time?, db_default: true
-      field :updated_at, Time?, db_default: true
+      field :created_at, Time, db_default: true
+      field :updated_at, Time, db_default: true
     end
   end
 
