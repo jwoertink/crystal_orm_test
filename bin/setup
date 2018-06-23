@@ -14,8 +14,8 @@ DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   name character varying NOT NULL,
-  created_at timestamp without time zone,
-  updated_at timestamp without time zone
+  created_at timestamp DEFAULT NOW(),
+  updated_at timestamp DEFAULT NOW()
 );
 COMMIT;
 SQL
