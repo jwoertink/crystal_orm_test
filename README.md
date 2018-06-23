@@ -29,6 +29,17 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 1. Update to BIGSERIAL (Int64) once LuckyRecord supports it
 2. Jennifer does not support latest crystal yet
 
+## Subjects
+
+1. [Clear](https://github.com/anykeyh/clear)
+2. [Core](https://github.com/vladfaust/core)
+3. [Crecto](https://github.com/Crecto/crecto)
+4. [Granite](https://github.com/amberframework/granite)
+5. [Jennifer](https://github.com/imdrasil/jennifer.cr)
+6. [LuckyRecord](https://github.com/luckyframework/lucky_record)
+
+Let me know if there's another ORM that should be thrown in.
+
 ## Results
 Specs:
 ```
