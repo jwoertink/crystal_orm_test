@@ -18,7 +18,7 @@ dependencies:
 
   granite:
     github: amberframework/granite
-    branch: master
+    version: 0.12.1
 
   crecto:
     github: Crecto/crecto
