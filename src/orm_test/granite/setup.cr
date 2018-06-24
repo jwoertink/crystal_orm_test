@@ -20,4 +20,10 @@ module OrmTestGranite
     u.orm = "granite"
     u.save
   end
+  
+  # SELECT * FROM users WHERE orm = 'granite' ORDER BY id ASC
+  # Map all of the names in to an array
+  def simple_select
+    User.all("WHERE orm = ? ORDER BY id ASC", ["granite"]).map(&.name)
+  end
 end

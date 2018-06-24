@@ -28,6 +28,7 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 
 1. Update to BIGSERIAL (Int64) once LuckyRecord supports it
 2. Jennifer does not support latest crystal yet
+3. Granite fails select with `must be Proc(Array(OrmTestGranite::User)), not Proc(Array(OrmTestGranite::User))`
 
 ## Subjects
 

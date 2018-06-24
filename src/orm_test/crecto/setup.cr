@@ -27,4 +27,11 @@ module OrmTestCrecto
     u.orm = "crecto"
     Repo.insert(u)
   end
+  
+  # SELECT * FROM users WHERE orm = 'crecto' ORDER BY id ASC
+  # Map all of the names in to an array
+  def simple_select
+    q = Crecto::Repo::Query.where(orm: "crecto").order_by("id ASC")
+    Repo.all(User, q).map(&.name)
+  end
 end

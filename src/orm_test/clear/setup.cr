@@ -21,4 +21,10 @@ module OrmTestClear
     u.orm = "clear"
     u.save
   end
+
+  # SELECT * FROM users WHERE orm = 'clear' ORDER BY id ASC
+  # Map all of the names in to an array
+  def simple_select
+    User.query.where { orm == "clear" }.order_by({id: :asc}).map(&.name)
+  end
 end
