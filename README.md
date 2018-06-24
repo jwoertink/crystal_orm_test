@@ -52,11 +52,11 @@ PG: 9.6.3
 
 ```
                                  user     system      total        real
-clear simple_insert          0.000000   0.000000   0.000000 (  0.001366)
-crecto simple_insert         0.040000   0.020000   0.060000 (  0.312254)
-lucky_record simple_insert   0.040000   0.050000   0.090000 (  0.415375)
-core simple_insert           0.030000   0.020000   0.050000 (  0.288875)
-granite simple_insert        0.020000   0.020000   0.040000 (  0.279746)
+clear simple_insert          0.030000   0.020000   0.050000 (  0.336631)
+core simple_insert           0.030000   0.020000   0.050000 (  0.319820)
+crecto simple_insert         0.030000   0.020000   0.050000 (  0.321857)
+granite simple_insert        0.020000   0.020000   0.040000 (  0.295155)
+lucky_record simple_insert   0.060000   0.040000   0.100000 (  0.431958)
 ```
 
 
