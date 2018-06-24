@@ -24,12 +24,6 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 * `crystal build --release src/orm_test.cr -o run`
 * `./run`
 
-## ISSUES
-
-1. Update to BIGSERIAL (Int64) once LuckyRecord supports it
-2. Jennifer does not support latest crystal yet
-3. Granite fails select with `must be Proc(Array(OrmTestGranite::User)), not Proc(Array(OrmTestGranite::User))`
-
 ## Subjects
 
 1. [Clear](https://github.com/anykeyh/clear)
@@ -59,4 +53,8 @@ granite simple_insert        0.020000   0.020000   0.040000 (  0.295155)
 lucky_record simple_insert   0.060000   0.040000   0.100000 (  0.431958)
 ```
 
+## Motivation / Backstory
+Around 2016 when I started my first crystal project, there was only like 1 or 2 ORM options to choose, but they didn't work well. Your best option was to just use some raw SQL. Now, there's an explosion of ORMs, and too many to choose from. If your app is using [Kemal](http://kemalcr.com/), and you want to use an ORM, which do you choose? 
+
+This is about more than just speed. How well documented are these, which features do they support, how easy are they to setup, what does the query DSL and the models look like? Sometimes a little performance tradeoff is worth the hassel if it's easier to work with.
 
