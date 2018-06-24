@@ -9,6 +9,7 @@ module OrmTestCore
       primary_key :id
 
       field :name, String
+      field :orm, String
       field :created_at, Time, db_default: true
       field :updated_at, Time, db_default: true
     end
@@ -19,7 +20,7 @@ module OrmTestCore
 
   # INSERT INTO users(name) VALUES(whatever)
   def simple_insert
-    u = User.new(name: "CoreGuy #{rand(10_000)}")
+    u = User.new(name: "CoreGuy #{rand(10_000)}", orm: "core")
     Repo.insert(u)
   end
 end

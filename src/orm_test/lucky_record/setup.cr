@@ -8,6 +8,7 @@ module OrmTestLuckyRecord
   class User < LuckyRecord::Model
     table :users do
       column name : String
+      column orm : String
     end
   end
 
@@ -19,6 +20,7 @@ module OrmTestLuckyRecord
   def simple_insert
     u = UserMutation.new
     u.name.value = "LuckyRecordGuy #{rand(10_000)}"
+    u.orm.value = "lucky_record"
     u.save!
   end
 end

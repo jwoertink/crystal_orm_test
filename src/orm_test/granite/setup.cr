@@ -9,6 +9,7 @@ module OrmTestGranite
     table_name users
     primary id : Int32
     field name : String
+    field orm : String
     timestamps
   end
   
@@ -16,6 +17,7 @@ module OrmTestGranite
   def simple_insert
     u = User.new
     u.name = "GraniteGuy #{rand(10_000)}"
+    u.orm = "granite"
     u.save
   end
 end

@@ -16,6 +16,7 @@ module OrmTestCrecto
   class User < Crecto::Model
     schema "users" do
       field :name, String
+      field :orm, String
     end
   end
 
@@ -23,6 +24,7 @@ module OrmTestCrecto
   def simple_insert
     u = User.new
     u.name = "CrectoGuy #{rand(10_000)}"
+    u.orm = "crecto"
     Repo.insert(u)
   end
 end
