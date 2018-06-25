@@ -46,20 +46,28 @@ PG: 9.6.3
 
 ```
 BENCHMARKING simple_insert
-                                 user     system      total        real
-clear simple_insert          0.040000   0.020000   0.060000 (  0.348617)
-core simple_insert           0.020000   0.020000   0.040000 (  0.316705)
-crecto simple_insert         0.040000   0.020000   0.060000 (  0.357646)
-granite simple_insert        0.030000   0.020000   0.050000 (  0.311737)
-lucky_record simple_insert   0.060000   0.050000   0.110000 (  0.506803)
+                                user     system      total        real
+Clear simple_insert         0.030000   0.020000   0.050000 (  0.340290)
+Core simple_insert          0.030000   0.020000   0.050000 (  0.317419)
+Crecto simple_insert        0.040000   0.020000   0.060000 (  0.346847)
+Granite simple_insert       0.020000   0.020000   0.040000 (  0.308507)
+LuckyRecord simple_insert   0.060000   0.040000   0.100000 (  0.462734)
 
 BENCHMARKING simple_select
-                                 user     system      total        real
-clear simple_select          2.840000   0.930000   3.770000 (  2.670658)
-core simple_select           1.640000   0.390000   2.030000 (  1.831673)
-crecto simple_select         1.000000   0.210000   1.210000 (  1.331577)
-granite simple_select        0.980000   0.210000   1.190000 (  1.279650)
-lucky_record simple_select   0.970000   0.210000   1.180000 (  1.395014)
+                                user     system      total        real
+Clear simple_select         2.940000   0.730000   3.670000 (  2.859489)
+Core simple_select          1.810000   0.430000   2.240000 (  1.968253)
+Crecto simple_select        1.170000   0.260000   1.430000 (  1.454140)
+Granite simple_select       1.090000   0.260000   1.350000 (  1.411098)
+LuckyRecord simple_select   1.120000   0.240000   1.360000 (  1.532002)
+
+BENCHMARKING simple_update
+                                user     system      total        real
+Clear simple_update         0.090000   0.030000   0.120000 (  0.642692)
+Core simple_update          0.050000   0.030000   0.080000 (  0.547988)
+Crecto simple_update        0.080000   0.040000   0.120000 (  0.624735)
+Granite simple_update       0.040000   0.020000   0.060000 (  0.594069)
+LuckyRecord simple_update   0.090000   0.060000   0.150000 (  0.716832)
 ```
 
 ## Motivation / Backstory
