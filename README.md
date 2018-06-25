@@ -45,12 +45,21 @@ PG: 9.6.3
 ```
 
 ```
+BENCHMARKING simple_insert
                                  user     system      total        real
-clear simple_insert          0.030000   0.020000   0.050000 (  0.336631)
-core simple_insert           0.030000   0.020000   0.050000 (  0.319820)
-crecto simple_insert         0.030000   0.020000   0.050000 (  0.321857)
-granite simple_insert        0.020000   0.020000   0.040000 (  0.295155)
-lucky_record simple_insert   0.060000   0.040000   0.100000 (  0.431958)
+clear simple_insert          0.040000   0.020000   0.060000 (  0.348617)
+core simple_insert           0.020000   0.020000   0.040000 (  0.316705)
+crecto simple_insert         0.040000   0.020000   0.060000 (  0.357646)
+granite simple_insert        0.030000   0.020000   0.050000 (  0.311737)
+lucky_record simple_insert   0.060000   0.050000   0.110000 (  0.506803)
+
+BENCHMARKING simple_select
+                                 user     system      total        real
+clear simple_select          2.840000   0.930000   3.770000 (  2.670658)
+core simple_select           1.640000   0.390000   2.030000 (  1.831673)
+crecto simple_select         1.000000   0.210000   1.210000 (  1.331577)
+granite simple_select        0.980000   0.210000   1.190000 (  1.279650)
+lucky_record simple_select   0.970000   0.210000   1.180000 (  1.395014)
 ```
 
 ## Motivation / Backstory

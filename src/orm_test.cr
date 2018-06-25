@@ -76,5 +76,5 @@ def bench_simple_select
   end
 end
 
-#bench_simple_insert
+bench_simple_insert
 bench_simple_select
