@@ -10,15 +10,17 @@ module OrmTestClear
     column id : Int32, primary: true, presence: false
     column name : String
     column orm : String
+    column idx : Int32
     column created_at : Time, presence: false
     column updated_at : Time, presence: false
   end
 
   # INSERT INTO users(name) VALUES(whatever)
-  def simple_insert
+  def simple_insert(idx : Int32)
     u = User.new
-    u.name = "ClearGuy #{rand(10_000)}"
+    u.name = "ClearGuy #{idx}"
     u.orm = "clear"
+    u.idx = idx
     u.save
   end
 

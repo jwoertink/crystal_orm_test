@@ -11,15 +11,18 @@ echo "CREATE DATABASE crystal_orm_test;" | psql -U postgres
 read -r -d '' STR << SQL
 BEGIN;
 DROP INDEX IF EXISTS index_orm_on_users;
+DROP INDEX IF EXISTS index_idx_on_users;
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   name character varying NOT NULL,
   orm VARCHAR(100) NOT NULL,
+  idx integer NOT NULL,
   created_at timestamp NOT NULL DEFAULT now(),
   updated_at timestamp NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS index_orm_on_users ON users (orm);
+CREATE INDEX IF NOT EXISTS index_idx_on_users ON users (idx);
 COMMIT;
 SQL
 echo $STR | psql -U postgres crystal_orm_test

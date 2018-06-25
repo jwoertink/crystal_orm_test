@@ -7,23 +7,23 @@ def bench_simple_insert
   puts "BENCHMARKING simple_insert"
   Benchmark.bm do |x|
     x.report("clear simple_insert") do
-      1000.times do
-        OrmTestClear.simple_insert 
+      1000.times do |i|
+        OrmTestClear.simple_insert(i)
       end
     end
     x.report("core simple_insert") do
-      1000.times do
-        OrmTestCore.simple_insert
+      1000.times do |i|
+        OrmTestCore.simple_insert(i)
       end
     end
     x.report("crecto simple_insert") do
-      1000.times do
-        OrmTestCrecto.simple_insert
+      1000.times do |i|
+        OrmTestCrecto.simple_insert(i)
       end
     end    
     x.report("granite simple_insert") do
-      1000.times do
-        OrmTestGranite.simple_insert
+      1000.times do |i|
+        OrmTestGranite.simple_insert(i)
       end
     end
     # TODO: Add in once crystal 0.25.0 is supported
@@ -33,8 +33,8 @@ def bench_simple_insert
     #  end
     #end
     x.report("lucky_record simple_insert") do
-      1000.times do
-        OrmTestLuckyRecord.simple_insert
+      1000.times do |i|
+        OrmTestLuckyRecord.simple_insert(i)
       end
     end
   end

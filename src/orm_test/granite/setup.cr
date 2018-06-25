@@ -11,14 +11,16 @@ module OrmTestGranite
     primary id : Int32
     field name : String
     field orm : String
+    field idx : Int32
     timestamps
   end
   
   # INSERT INTO users(name) VALUES(whatever)
-  def simple_insert
+  def simple_insert(idx : Int32)
     u = User.new
-    u.name = "GraniteGuy #{rand(10_000)}"
+    u.name = "GraniteGuy #{idx}"
     u.orm = "granite"
+    u.idx = idx
     u.save
   end
   

@@ -17,14 +17,16 @@ module OrmTestCrecto
     schema "users" do
       field :name, String
       field :orm, String
+      field :idx, Int32
     end
   end
 
   # INSERT INTO users(name) VALUES(whatever)
-  def simple_insert
+  def simple_insert(idx : Int32)
     u = User.new
-    u.name = "CrectoGuy #{rand(10_000)}"
+    u.name = "CrectoGuy #{idx}"
     u.orm = "crecto"
+    u.idx = idx
     Repo.insert(u)
   end
   

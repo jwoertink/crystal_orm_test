@@ -9,18 +9,19 @@ module OrmTestLuckyRecord
     table :users do
       column name : String
       column orm : String
+      column idx : Int32
     end
   end
 
   class UserMutation < User::BaseForm 
-    fillable name
   end
 
   # INSERT INTO users(name) VALUES(whatever)
-  def simple_insert
+  def simple_insert(idx : Int32)
     u = UserMutation.new
-    u.name.value = "LuckyRecordGuy #{rand(10_000)}"
+    u.name.value = "LuckyRecordGuy #{idx}"
     u.orm.value = "lucky_record"
+    u.idx.value = idx
     u.save!
   end
   

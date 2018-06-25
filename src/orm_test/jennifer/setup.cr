@@ -15,6 +15,7 @@ module OrmTestJennifer
       id: Primary32, 
       name: String,
       orm: String,
+      idx: Int32,
       created_at: Time,
       updated_at: Time
     )

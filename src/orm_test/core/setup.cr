@@ -10,6 +10,7 @@ module OrmTestCore
 
       field :name, String
       field :orm, String
+      field :idx, Int32
       field :created_at, Time, db_default: true
       field :updated_at, Time, db_default: true
     end
@@ -19,8 +20,8 @@ module OrmTestCore
   Repo = Core::Repository.new(DB)
 
   # INSERT INTO users(name) VALUES(whatever)
-  def simple_insert
-    u = User.new(name: "CoreGuy #{rand(10_000)}", orm: "core")
+  def simple_insert(idx : Int32)
+    u = User.new(name: "CoreGuy #{idx}", orm: "core", idx: idx)
     Repo.insert(u)
   end
   
