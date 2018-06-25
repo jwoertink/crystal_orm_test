@@ -2,7 +2,8 @@ module OrmTestLuckyRecord
   extend self
 
   LuckyRecord::Repo.configure do
-    settings.url = "postgres://#{DATABASE[:user]}@#{DATABASE[:host]}/#{DATABASE[:name]}"
+    #settings.url = "postgres://#{DATABASE[:user]}@#{DATABASE[:host]}/#{DATABASE[:name]}"
+    settings.url = "postgres://postgres@localhost/crystal_orm_test"
   end
 
   class User < LuckyRecord::Model
@@ -13,7 +14,8 @@ module OrmTestLuckyRecord
     end
   end
 
-  class UserMutation < User::BaseForm 
+  class UserMutation < User::BaseForm
+    fillable name
   end
 
   # INSERT INTO users(name) VALUES(whatever)
@@ -27,16 +29,17 @@ module OrmTestLuckyRecord
   
   # SELECT * FROM users WHERE orm = 'lucky_record' ORDER BY id ASC
   # Map all of the names in to an array
-  def simple_select
+  def simple_select(idx : Int32)
     User::BaseQuery.new.orm("lucky_record").id.asc_order.map(&.name)
   end
   
   # Find user by orm and idx
   # update name
   # NOTE: This makes 2 SQL calls. Though it's not "optimized", it's more practical for real world
-  def simple_update(idx_value)
-    u = User::BaseQuery.new.orm("lucky_record").idx(idx_value).first
-    u.name = "Lucky Guy#{idx_value}"
-    UserMutation.new(u).save!
+  def simple_update(idx_value : Int32)
+    q = User::BaseQuery.new.orm("lucky_record").idx(idx_value).first
+    u = UserMutation.new(q)
+    u.name.value = "Lucky Guy#{idx_value}"
+    u.save!
   end
 end

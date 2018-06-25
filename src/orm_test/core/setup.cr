@@ -27,14 +27,14 @@ module OrmTestCore
   
   # SELECT * FROM users WHERE orm = 'core' ORDER BY id ASC
   # Map all of the names in to an array
-  def simple_select
+  def simple_select(idx : Int32)
     Repo.query(User.where(orm: "core").order_by("id", :ASC)).map(&.name)
   end
   
   # Find user by orm and idx
   # update name
   # NOTE: This makes 2 SQL calls. Though it's not "optimized", it's more practical for real world
-  def simple_update(idx_value)
+  def simple_update(idx_value : Int32)
     u = Repo.query_one(User.where(orm: "core", idx: idx_value)).as(User)
     u.name = "Core Guy#{idx_value}"
     Repo.update(u)

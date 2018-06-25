@@ -26,16 +26,16 @@ module OrmTestGranite
   
   # SELECT * FROM users WHERE orm = 'granite' ORDER BY id ASC
   # Map all of the names in to an array
-  def simple_select
+  def simple_select(idx : Int32)
     User.where(orm: "granite").order(id: :asc).map(&.name)
   end
   
   # Find user by orm and idx
   # update name
   # NOTE: This makes 2 SQL calls. Though it's not "optimized", it's more practical for real world
-  def simple_update(idx_value)
+  def simple_update(idx_value : Int32)
     u = User.where(orm: "granite", idx: idx_value).first.as(User)
     u.name = "Granite Guy#{idx_value}"
-    u.save!
+    u.save
   end
 end
