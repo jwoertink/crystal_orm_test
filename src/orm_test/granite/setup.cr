@@ -5,6 +5,7 @@ module OrmTestGranite
   Granite.settings.logger = ::Logger.new(nil)
 
   class User < Granite::Base
+    extend Granite::Query::BuilderMethods
     adapter pg
     table_name users
     primary id : Int32
@@ -24,6 +25,6 @@ module OrmTestGranite
   # SELECT * FROM users WHERE orm = 'granite' ORDER BY id ASC
   # Map all of the names in to an array
   def simple_select
-    User.all("WHERE orm = ? ORDER BY id ASC", ["granite"]).map(&.name)
+    User.where(orm: "granite").order(id: :asc).map(&.name)
   end
 end
