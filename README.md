@@ -70,6 +70,18 @@ Granite simple_update       0.040000   0.020000   0.060000 (  0.594069)
 LuckyRecord simple_update   0.090000   0.060000   0.150000 (  0.716832)
 ```
 
+For some fun, I decided to port this test to ActiveRecord (Ruby), and see how it compares. The theory was that it would be a little slower, but not by much. Here's the results
+
+```
+       user     system      total        real
+activerecord simple_insert  0.570000   0.060000   0.630000 (  1.014383)
+       user     system      total        real
+activerecord simple_select 11.950000   0.210000  12.160000 ( 13.046481)
+       user     system      total        real
+activerecord simple_update  0.900000   0.080000   0.980000 (  1.560936)
+```
+The code is [here](https://gist.github.com/jwoertink/55f474ddb0d2322e09d32af887a07bc9)
+
 ## Motivation / Backstory
 Around 2016 when I started my first crystal project, there was only like 1 or 2 ORM options to choose, but they didn't work well. Your best option was to just use some raw SQL. Now, there's an explosion of ORMs, and too many to choose from. If your app is using [Kemal](http://kemalcr.com/), and you want to use an ORM, which do you choose? 
 
