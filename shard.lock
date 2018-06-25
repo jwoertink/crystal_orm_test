@@ -1,0 +1,90 @@
+version: 1.0
+shards:
+  accord:
+    github: neovintage/accord
+    version: 1.1.0
+
+  admiral:
+    github: jwaldrip/admiral.cr
+    version: 1.7.2
+
+  blank:
+    github: kostya/blank
+    version: 0.1.0
+
+  clear:
+    github: anykeyh/clear
+    commit: 888e2bc71467419aedde78f2207bc510c761a52c
+
+  core:
+    github: vladfaust/core
+    commit: 078e398c5804dbed6a59bd6a3e260de5cc91bd95
+
+  crecto:
+    github: Crecto/crecto
+    commit: b8da62ed919f35b664d1f432862a68e506b212a5
+
+  db:
+    github: crystal-lang/crystal-db
+    version: 0.5.0
+
+  generate:
+    github: anykeyh/generate.cr
+    commit: 21b2fe1a0c4b3773f6cae83118243d3b0ada0e2c
+
+  granite:
+    github: amberframework/granite
+    version: 0.12.1
+
+  habitat:
+    github: luckyframework/habitat
+    version: 0.3.0
+
+  i18n:
+    github: TechMagister/i18n.cr
+    commit: fc96c6b12547c84da2e76495f9c970acda64976b
+
+  ifrit:
+    github: imdrasil/ifrit
+    version: 0.1.2
+
+  inflector:
+    github: phoffer/inflector.cr
+    version: 0.1.8
+
+  jennifer:
+    github: imdrasil/jennifer.cr
+    commit: 48aa3db1d856b48742894f7ef3492d45065eb657
+
+  lucky_cli:
+    github: luckyframework/lucky_cli
+    version: 0.11.0
+
+  lucky_inflector:
+    github: luckyframework/lucky_inflector
+    commit: 0d1e9ca56d100a138edd9a260b9d3e54e3452117
+
+  lucky_record:
+    github: luckyframework/lucky_record
+    commit: ff9dde975d56dce436c77fe9bcef89a1c4ec4bad
+
+  pg:
+    github: will/crystal-pg
+    version: 0.15.0
+
+  sam:
+    github: imdrasil/sam.cr
+    version: 0.2.4
+
+  teeplate:
+    github: mosop/teeplate
+    version: 0.6.1
+
+  time_format:
+    github: vladfaust/time_format.cr
+    version: 0.1.1
+
+  time_zone:
+    github: imdrasil/time_zone
+    version: 0.1.1
+
