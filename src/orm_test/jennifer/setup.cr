@@ -34,4 +34,10 @@ module OrmTestJennifer
   def simple_select
     User.where { _orm == "jennifer" }.order(id: :asc).map(&.name)
   end
+  
+  # Find user by orm and idx
+  # update name
+  # NOTE: This makes 2 SQL calls. Though it's not "optimized", it's more practical for real world
+  def simple_update(idx_value)
+  end
 end

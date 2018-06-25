@@ -76,5 +76,42 @@ def bench_simple_select
   end
 end
 
+def bench_simple_update
+  puts "BENCHMARKING simple_update"
+  Benchmark.bm do |x|
+    x.report("clear simple_update") do
+      1000.times do |i|
+        OrmTestClear.simple_update(i)
+      end
+    end
+    x.report("core simple_update") do
+      1000.times do |i|
+        OrmTestCore.simple_update(i)
+      end
+    end
+    x.report("crecto simple_update") do
+      1000.times do |i|
+        OrmTestCrecto.simple_update(i)
+      end
+    end
+    x.report("granite simple_update") do
+      1000.times do |i|
+        OrmTestGranite.simple_update(i)
+      end
+    end
+    #x.report("jennifer simple_update") do
+    #  1000.times do |i|
+    #    OrmTestJennifer.simple_update(i)
+    #  end
+    #end
+    x.report("lucky_record simple_update") do
+      1000.times do |i|
+        OrmTestLuckyRecord.simple_update(i)
+      end
+    end
+  end
+end
+
 bench_simple_insert
 bench_simple_select
+bench_simple_update

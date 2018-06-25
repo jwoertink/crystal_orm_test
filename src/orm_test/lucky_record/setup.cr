@@ -30,4 +30,13 @@ module OrmTestLuckyRecord
   def simple_select
     User::BaseQuery.new.orm("lucky_record").id.asc_order.map(&.name)
   end
+  
+  # Find user by orm and idx
+  # update name
+  # NOTE: This makes 2 SQL calls. Though it's not "optimized", it's more practical for real world
+  def simple_update(idx_value)
+    u = User::BaseQuery.new.orm("lucky_record").idx(idx_value).first
+    u.name = "Lucky Guy#{idx_value}"
+    UserMutation.new(u).save!
+  end
 end

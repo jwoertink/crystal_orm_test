@@ -29,4 +29,13 @@ module OrmTestClear
   def simple_select
     User.query.where { orm == "clear" }.order_by({id: :asc}).map(&.name)
   end
+
+  # Find user by orm and idx
+  # update name
+  # NOTE: This makes 2 SQL calls. Though it's not "optimized", it's more practical for real world
+  def simple_update(idx_value)
+    u = User.query.where { (orm == "clear") & (idx == idx_value) }.first.as(User)
+    u.name = "Clear Guy#{idx_value}"
+    u.save!
+  end
 end
