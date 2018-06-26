@@ -68,6 +68,14 @@ Core simple_update          0.050000   0.030000   0.080000 (  0.547988)
 Crecto simple_update        0.080000   0.040000   0.120000 (  0.624735)
 Granite simple_update       0.040000   0.020000   0.060000 (  0.594069)
 LuckyRecord simple_update   0.090000   0.060000   0.150000 (  0.716832)
+
+BENCHMARKING simple_delete
+                                user     system      total        real
+Clear simple_delete         0.090000   0.040000   0.130000 (  0.565826)
+Core simple_delete          0.040000   0.030000   0.070000 (  0.519648)
+Crecto simple_delete        0.060000   0.030000   0.090000 (  0.551956)
+Granite simple_delete       0.050000   0.030000   0.080000 (  0.564741)
+LuckyRecord simple_delete   0.040000   0.030000   0.070000 (  0.551112)
 ```
 
 For some fun, I decided to port this test to ActiveRecord (Ruby), and see how it compares. The theory was that it would be a little slower, but not by much. Here's the results
