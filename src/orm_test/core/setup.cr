@@ -39,4 +39,11 @@ module OrmTestCore
     u.name = "Core Guy#{idx_value}"
     Repo.update(u)
   end
+
+  # Find user by orm and idx
+  # delete user
+  def simple_delete(idx : Int32)
+    u = Repo.query_one(User.where(orm: "core", idx: idx)).as(User)
+    Repo.delete(u)
+  end
 end

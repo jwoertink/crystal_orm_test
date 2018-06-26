@@ -40,4 +40,7 @@ module OrmTestJennifer
   # NOTE: This makes 2 SQL calls. Though it's not "optimized", it's more practical for real world
   def simple_update(idx_value)
   end
+  def simple_delete(idx : Int32)
+
+  end
 end

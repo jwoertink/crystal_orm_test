@@ -45,4 +45,11 @@ module OrmTestCrecto
     u.name = "Crecto Guy#{idx_value}"
     Repo.update(u)
   end
+  
+  # Find user by orm and idx
+  # delete user
+  def simple_delete(idx : Int32)
+    u = Repo.get_by(User, orm: "crecto", idx: idx).as(User)
+    Repo.delete(u)
+  end
 end

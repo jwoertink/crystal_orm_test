@@ -42,4 +42,11 @@ module OrmTestLuckyRecord
     u.name.value = "Lucky Guy#{idx_value}"
     u.save!
   end
+
+  # Find user by orm and idx
+  # delete user
+  def simple_delete(idx : Int32)
+    q = User::BaseQuery.new.orm("lucky_record").idx(idx).first
+    q.delete
+  end
 end

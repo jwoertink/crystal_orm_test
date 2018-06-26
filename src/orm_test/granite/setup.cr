@@ -38,4 +38,11 @@ module OrmTestGranite
     u.name = "Granite Guy#{idx_value}"
     u.save
   end
+  
+  # Find user by orm and idx
+  # delete user
+  def simple_delete(idx : Int32)
+    u = User.where(orm: "granite", idx: idx).first.as(User)
+    u.destroy
+  end
 end

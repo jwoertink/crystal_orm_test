@@ -38,4 +38,11 @@ module OrmTestClear
     u.name = "Clear Guy#{idx_value}"
     u.save!
   end
+
+  # Find user by orm and idx
+  # delete user
+  def simple_delete(idx_value : Int32)
+    u = User.query.where { (orm == "clear") & (idx == idx_value) }.first.as(User)
+    u.delete
+  end
 end
