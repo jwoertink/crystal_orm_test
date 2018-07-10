@@ -40,42 +40,43 @@ Specs:
 ```
 Machine: 2017 MBP 2.7GHz i7 16GB RAM
 OS: macOS 10.13.5
-Crystal 0.25.0
+Crystal 0.25.1
 PG: 9.6.3
 ```
 
 ```
 BENCHMARKING simple_insert
                                 user     system      total        real
-Clear simple_insert         0.030000   0.020000   0.050000 (  0.340290)
-Core simple_insert          0.030000   0.020000   0.050000 (  0.317419)
-Crecto simple_insert        0.040000   0.020000   0.060000 (  0.346847)
-Granite simple_insert       0.020000   0.020000   0.040000 (  0.308507)
-LuckyRecord simple_insert   0.060000   0.040000   0.100000 (  0.462734)
-
+Clear simple_insert         0.060000   0.030000   0.090000 (  0.435021)
+Core simple_insert          0.020000   0.020000   0.040000 (  0.323863)
+Crecto simple_insert        0.050000   0.030000   0.080000 (  0.343248)
+Granite simple_insert       0.020000   0.010000   0.030000 (  0.304087)
+Jennifer simple_insert      0.040000   0.040000   0.080000 (  0.428838)
+LuckyRecord simple_insert   0.070000   0.050000   0.120000 (  0.506208)
 BENCHMARKING simple_select
                                 user     system      total        real
-Clear simple_select         2.940000   0.730000   3.670000 (  2.859489)
-Core simple_select          1.810000   0.430000   2.240000 (  1.968253)
-Crecto simple_select        1.170000   0.260000   1.430000 (  1.454140)
-Granite simple_select       1.090000   0.260000   1.350000 (  1.411098)
-LuckyRecord simple_select   1.120000   0.240000   1.360000 (  1.532002)
-
+Clear simple_select         2.480000   0.560000   3.040000 (  2.466874)
+Core simple_select          1.940000   0.560000   2.500000 (  2.025602)
+Crecto simple_select        1.200000   0.300000   1.500000 (  1.478196)
+Granite simple_select       1.110000   0.290000   1.400000 (  1.404841)
+Jennifer simple_select      1.150000   0.270000   1.420000 (  1.445992)
+LuckyRecord simple_select   1.130000   0.270000   1.400000 (  1.543667)
 BENCHMARKING simple_update
                                 user     system      total        real
-Clear simple_update         0.090000   0.030000   0.120000 (  0.642692)
-Core simple_update          0.050000   0.030000   0.080000 (  0.547988)
-Crecto simple_update        0.080000   0.040000   0.120000 (  0.624735)
-Granite simple_update       0.040000   0.020000   0.060000 (  0.594069)
-LuckyRecord simple_update   0.090000   0.060000   0.150000 (  0.716832)
-
+Clear simple_update         0.090000   0.040000   0.130000 (  0.648868)
+Core simple_update          0.040000   0.030000   0.070000 (  0.550407)
+Crecto simple_update        0.090000   0.040000   0.130000 (  0.619346)
+Granite simple_update       0.050000   0.030000   0.080000 (  0.598360)
+Jennifer simple_update      0.030000   0.020000   0.050000 (  0.535570)
+LuckyRecord simple_update   0.100000   0.060000   0.160000 (  0.715411)
 BENCHMARKING simple_delete
                                 user     system      total        real
-Clear simple_delete         0.090000   0.040000   0.130000 (  0.565826)
-Core simple_delete          0.040000   0.030000   0.070000 (  0.519648)
-Crecto simple_delete        0.060000   0.030000   0.090000 (  0.551956)
-Granite simple_delete       0.050000   0.030000   0.080000 (  0.564741)
-LuckyRecord simple_delete   0.040000   0.030000   0.070000 (  0.551112)
+Clear simple_delete         0.090000   0.040000   0.130000 (  0.573863)
+Core simple_delete          0.040000   0.020000   0.060000 (  0.509345)
+Crecto simple_delete        0.050000   0.030000   0.080000 (  0.554977)
+Granite simple_delete       0.030000   0.030000   0.060000 (  0.543780)
+Jennifer simple_delete      0.060000   0.050000   0.110000 (  0.613785)
+LuckyRecord simple_delete   0.040000   0.020000   0.060000 (  0.531738)
 ```
 
 For some fun, I decided to port this test to ActiveRecord (Ruby), and see how it compares. The theory was that it would be a little slower, but not by much. Here's the results
