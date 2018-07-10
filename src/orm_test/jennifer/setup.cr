@@ -7,6 +7,7 @@ module OrmTestJennifer
     conf.db = DATABASE[:name]
     conf.password = ""
     conf.adapter = "postgres"
+    conf.logger = ::Logger.new(nil)
   end
 
   class User < Jennifer::Model::Base
@@ -26,7 +27,9 @@ module OrmTestJennifer
     u = User.new({
       name: "JenniferGuy #{idx}",
       orm: "jennifer",
-      idx: idx
+      idx: idx,
+      created_at: Time.now,
+      updated_at: Time.now
     })
     u.save
   end
@@ -47,6 +50,6 @@ module OrmTestJennifer
   
   def simple_delete(idx : Int32)
     u = User.where { (_orm == "jennifer") & (_idx == idx) }.first!
-    User.destroy(u.id)
+    u.destroy
   end
 end
