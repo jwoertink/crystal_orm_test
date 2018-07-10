@@ -1,9 +1,5 @@
 version: 1.0
 shards:
-  accord:
-    github: neovintage/accord
-    version: 1.1.0
-
   admiral:
     github: jwaldrip/admiral.cr
     version: 1.7.2
@@ -14,7 +10,7 @@ shards:
 
   clear:
     github: anykeyh/clear
-    commit: 888e2bc71467419aedde78f2207bc510c761a52c
+    commit: 3979d7bf8cfd428f1070cf200bb832dc0b3b4e47
 
   core:
     github: vladfaust/core
@@ -30,11 +26,11 @@ shards:
 
   generate:
     github: anykeyh/generate.cr
-    commit: 21b2fe1a0c4b3773f6cae83118243d3b0ada0e2c
+    commit: f374acb340ea92a79fba97c7deb2f0a0ff4be62f
 
   granite:
     github: amberframework/granite
-    version: 0.12.1
+    commit: 6407b5214f3145b7d535186fe4785a5b9dccc63d
 
   habitat:
     github: luckyframework/habitat
@@ -42,7 +38,7 @@ shards:
 
   i18n:
     github: TechMagister/i18n.cr
-    commit: fc96c6b12547c84da2e76495f9c970acda64976b
+    version: 0.2.0
 
   ifrit:
     github: imdrasil/ifrit
@@ -54,7 +50,7 @@ shards:
 
   jennifer:
     github: imdrasil/jennifer.cr
-    commit: 48aa3db1d856b48742894f7ef3492d45065eb657
+    commit: bb33ff728e712c85dbf565f12bf1b4281983cdc6
 
   lucky_cli:
     github: luckyframework/lucky_cli
@@ -62,11 +58,11 @@ shards:
 
   lucky_inflector:
     github: luckyframework/lucky_inflector
-    commit: 0d1e9ca56d100a138edd9a260b9d3e54e3452117
+    version: 0.1.1
 
   lucky_record:
     github: luckyframework/lucky_record
-    commit: ff9dde975d56dce436c77fe9bcef89a1c4ec4bad
+    commit: 1c0757fa6686d6687259e5b8c299a61e1d4815de
 
   pg:
     github: will/crystal-pg
@@ -82,9 +78,5 @@ shards:
 
   time_format:
     github: vladfaust/time_format.cr
-    version: 0.1.1
-
-  time_zone:
-    github: imdrasil/time_zone
     version: 0.1.1
 
