@@ -1,3 +1,3 @@
-#require "jennifer"
-#require "jennifer/adapter/postgres"
-#require "./jennifer/setup"
+require "jennifer"
+require "jennifer/adapter/postgres"
+require "./jennifer/setup"
