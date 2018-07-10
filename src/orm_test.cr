@@ -8,7 +8,7 @@ DATABASE = {host: "localhost", name: "crystal_orm_test", user: "postgres"}
   def bench_{{test.id}}
     puts "BENCHMARKING {{test.id}}"
     Benchmark.bm do |x|
-      {% for subject in ["Clear", "Core", "Crecto", "Granite", "LuckyRecord"] %}
+      {% for subject in ["Clear", "Core", "Crecto", "Granite", "Jennifer", "LuckyRecord"] %}
         x.report("{{subject.id}} {{test.id}}") do
           1000.times do |i|
             OrmTest{{subject.id}}.{{test.id}}(i)
