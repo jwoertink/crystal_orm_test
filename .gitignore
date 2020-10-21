@@ -3,4 +3,4 @@
 /.shards/
 /run
 *.dwarf
-
+/bin/*

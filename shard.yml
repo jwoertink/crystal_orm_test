@@ -4,14 +4,11 @@ version: 0.1.0
 authors:
   - Jeremy Woertink <jeremywoertink@gmail.com>
 
-crystal: 0.25.0
+crystal: 0.35.1
 
 license: MIT
 
 dependencies:
-  pg:
-    github: will/crystal-pg
-
   jennifer:
     github: imdrasil/jennifer.cr
     branch: master
@@ -28,15 +25,10 @@ dependencies:
     github: anykeyh/clear
     branch: master
 
-  lucky_record:
-    github: luckyframework/lucky_record
+  avram:
+    github: luckyframework/avram
     branch: master
 
-  core:
-    github: vladfaust/core
-    branch: master
-
-development_dependencies:
-  lucky_inflector:
-    github: luckyframework/lucky_inflector
+  onyx-sql:
+    github: onyxframework/sql
     branch: master

@@ -1,0 +1,7 @@
+dependencies:
+  db:
+    github: crystal-lang/crystal-db
+    branch: master
+  pg:
+    github: will/crystal-pg
+    branch: master
