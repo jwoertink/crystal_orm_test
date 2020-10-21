@@ -2,9 +2,6 @@ module OrmTestAvram
   extend self
 
   Avram::Log.dexter.configure(:none)
-  Avram::QueryLog.dexter.configure(:none)
-  Avram::FailedQueryLog.dexter.configure(:none)
-  Avram::SaveFailedLog.dexter.configure(:none)
 
   class AppDatabase < Avram::Database
   end
