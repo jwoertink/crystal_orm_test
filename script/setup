@@ -5,8 +5,8 @@ if ! [ -x "$(command -v postgres)" ]; then
   exit 1
 fi
 
-echo "DROP DATABASE IF EXISTS crystal_orm_test;" | psql -U postgres
-echo "CREATE DATABASE crystal_orm_test;" | psql -U postgres
+dropdb crystal_orm_test --if-exists
+createdb crystal_orm_test
 
 read -r -d '' STR << SQL
 BEGIN;
@@ -25,4 +25,4 @@ CREATE INDEX IF NOT EXISTS index_orm_on_users ON users (orm);
 CREATE INDEX IF NOT EXISTS index_idx_on_users ON users (idx);
 COMMIT;
 SQL
-echo $STR | psql -U postgres crystal_orm_test
+echo $STR | psql crystal_orm_test

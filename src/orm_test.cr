@@ -1,7 +1,9 @@
 require "benchmark"
 require "./orm_test/*"
 
-DATABASE = {host: "localhost", name: "crystal_orm_test", user: "postgres"}
+USERNAME = `whoami`.chomp
+
+DATABASE = {host: "localhost", name: "crystal_orm_test", user: USERNAME}
 
 # Enable all once updated
 # ["Avram", "Clear", "Crecto", "Granite", "Jennifer", "OnyxSql"]
