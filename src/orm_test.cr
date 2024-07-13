@@ -6,7 +6,7 @@ DATABASE = {host: "localhost", name: "crystal_orm_test", user: "postgres"}
 # Enable all once updated
 ENABLED_ORMS = [
   # "Avram",
-  # "Clear",
+  "Clear",
   "Crecto",
   "Granite",
   "Jennifer",

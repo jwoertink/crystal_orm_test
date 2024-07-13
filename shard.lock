@@ -14,8 +14,8 @@ shards:
     version: 0.1.0+git.commit.46c4c14594057dbcfaf27e7e7c8c164d3f0ce3f1
 
   clear:
-    git: https://github.com/anykeyh/clear.git
-    version: 0.9+git.commit.480289555c833793fa6964398fefec6b7e25168d
+    git: https://github.com/lbguilherme/clear.git
+    version: 0.9+git.commit.e4b6aced68ce80f61cbb6fd95cd3917b7e551ac0
 
   crecto:
     git: https://github.com/crecto/crecto.git

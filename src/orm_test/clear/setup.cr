@@ -7,12 +7,12 @@ module OrmTestClear
     include Clear::Model
     self.table = "users"
 
-    column id : Int64, primary: true
+    column id : Int64, primary: true, presence: false
     column name : String
     column orm : String
     column idx : Int32
-    column created_at : Time
-    column updated_at : Time
+    column created_at : Time, presence: false
+    column updated_at : Time, presence: false
   end
 
   # INSERT INTO users(name) VALUES(whatever)
