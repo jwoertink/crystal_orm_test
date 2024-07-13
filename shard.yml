@@ -4,7 +4,7 @@ version: 0.1.0
 authors:
   - Jeremy Woertink <jeremywoertink@gmail.com>
 
-crystal: 0.35.1
+crystal: 1.22.2
 
 license: MIT
 
