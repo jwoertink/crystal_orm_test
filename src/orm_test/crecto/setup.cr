@@ -9,7 +9,7 @@ module OrmTestCrecto
       conf.hostname = DATABASE[:host]
       conf.database = DATABASE[:name]
       conf.username = DATABASE[:user]
-      conf.password = ""
+      conf.password = DATABASE[:pass]
     end
   end
 

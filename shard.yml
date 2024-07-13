@@ -28,7 +28,7 @@ dependencies:
 
   avram:
     github: luckyframework/avram
-    branch: master
+    branch: main
 
   onyx-sql:
     github: onyxframework/sql

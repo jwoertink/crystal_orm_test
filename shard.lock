@@ -7,7 +7,7 @@ shards:
 
   avram:
     git: https://github.com/luckyframework/avram.git
-    version: 0.22.0+git.commit.9251a965372d319977558bcbe3d0696f60aeb45e
+    version: 1.2.0+git.commit.bec90582181bed458e1c36d0497b8fce3353306f
 
   cadmium_transliterator:
     git: https://github.com/cadmiumcr/transliterator.git
@@ -63,7 +63,11 @@ shards:
 
   lucky_task:
     git: https://github.com/luckyframework/lucky_task.git
-    version: 0.1.1
+    version: 0.3.0
+
+  lucky_template:
+    git: https://github.com/luckyframework/lucky_template.git
+    version: 0.2.0
 
   onyx-sql:
     git: https://github.com/onyxframework/sql.git
@@ -91,5 +95,5 @@ shards:
 
   wordsmith:
     git: https://github.com/luckyframework/wordsmith.git
-    version: 0.3.0
+    version: 0.4.0
 

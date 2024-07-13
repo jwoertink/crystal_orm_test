@@ -1,3 +1,3 @@
 require "pg"
-# require "avram"
-# require "./avram/setup"
+require "avram"
+require "./avram/setup"

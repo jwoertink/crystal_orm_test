@@ -5,7 +5,7 @@ module OrmTestJennifer
     conf.host = DATABASE[:host]
     conf.user = DATABASE[:user]
     conf.db = DATABASE[:name]
-    conf.password = ""
+    conf.password = DATABASE[:pass]
     conf.adapter = "postgres"
     conf.logger = Log.for("db", :fatal)
   end

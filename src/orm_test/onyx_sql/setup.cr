@@ -15,14 +15,14 @@ module OrmTestOnyxSql
     end
   end
 
-  ENV["DATABASE_URL"] = "postgres://#{DATABASE[:user]}@#{DATABASE[:host]}/#{DATABASE[:name]}"
+  ENV["DATABASE_URL"] = "postgres://#{DATABASE[:user]}:#{DATABASE[:pass]}@#{DATABASE[:host]}/#{DATABASE[:name]}"
   Repo = Onyx::SQL::Repository.new(DB.open(ENV["DATABASE_URL"]), Onyx::SQL::Repository::Logger::Dummy.new)
 
   # INSERT INTO users(name) VALUES(whatever)
   def simple_insert(idx : Int32)
     # TODO: This method throws this error:
     #   Unhandled exception: bind message supplies 1 parameters, but prepared statement "" requires 3 (PQ::PQError)
-    #Repo.exec(User.insert(name: "OnyxSqlRecord #{idx}", orm: "onyx_sql", idx: idx))
+    # Repo.exec(User.insert(name: "OnyxSqlRecord #{idx}", orm: "onyx_sql", idx: idx))
     sleep 0.05
   end
 
@@ -32,9 +32,9 @@ module OrmTestOnyxSql
     # TODO: This method throws this error:
     #    OnyxSql simple_select Unhandled exception: syntax error at or near ")" (PQ::PQError)
     #
-    #query = User.where(orm: "onyx_sql").order_by(:id)
-    #result_set = Conn.query(*query.build)
-    #User.from_rs(result_set).map(&.name)
+    # query = User.where(orm: "onyx_sql").order_by(:id)
+    # result_set = Conn.query(*query.build)
+    # User.from_rs(result_set).map(&.name)
     sleep 0.05
   end
 
@@ -45,10 +45,10 @@ module OrmTestOnyxSql
     # TODO: This method throws this error:
     #    OnyxSql simple_update Unhandled exception: syntax error at or near "AND" (PQ::PQError)
     #
-    #query = User.where(orm: "onyx_sql", idx: idx_value)
-    #user = User.from_rs(Conn.query(*query.build)).first?.not_nil!
-    #changeset = user.changeset
-    #changeset.update(name: "OnyxSql #{idx_value}")
+    # query = User.where(orm: "onyx_sql", idx: idx_value)
+    # user = User.from_rs(Conn.query(*query.build)).first?.not_nil!
+    # changeset = user.changeset
+    # changeset.update(name: "OnyxSql #{idx_value}")
     sleep 0.05
   end
 

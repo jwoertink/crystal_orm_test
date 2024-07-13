@@ -13,8 +13,8 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 
 ## Requirements
 
-1. Crystal ~> 0.35
-2. PostgreSQL > 10
+1. Crystal >= 1.10
+2. PostgreSQL > 12
 
 ## Running test
 
@@ -24,9 +24,13 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 * `crystal build --release src/orm_test.cr -o run`
 * `./run`
 
+Configure any database credentials you need with environment variables
+
+`DB_HOST`, `DB_USER`, `DB_PASS`
+
 ## Subjects
 
-1. [Avram](https://github.com/luckyframework/avram) (currently disabled since it conflicts with Granite)
+1. [Avram](https://github.com/luckyframework/avram)
 1. [Clear](https://github.com/anykeyh/clear)
 1. [Crecto](https://github.com/Crecto/crecto)
 1. [Granite](https://github.com/amberframework/granite)
@@ -83,6 +87,46 @@ activerecord simple_select 11.950000   0.210000  12.160000 ( 13.046481)
 activerecord simple_update  0.900000   0.080000   0.980000 (  1.560936)
 ```
 The code is [here](https://gist.github.com/jwoertink/55f474ddb0d2322e09d32af887a07bc9)
+
+Specs:
+```
+Machine: 2021 System76 Thelio 3.7GHz AMD Ryzen 5 5600X 64GB RAM
+OS: Pop!_OS 22.04 LTS x86_64
+Crystal 1.12.1
+PG: 14
+DATE: 2024-07-13
+```
+
+```
+BENCHMARKING simple_insert
+                             user     system      total        real
+Avram simple_insert      0.035337   0.062070   0.097407 (  2.410567)
+Clear simple_insert      0.034263   0.051799   0.086062 (  2.373634)
+Crecto simple_insert     0.035744   0.023926   0.059670 (  2.212781)
+Granite simple_insert    0.011970   0.038810   0.050780 (  2.184863)
+Jennifer simple_insert   0.028194   0.066368   0.094562 (  2.353238)
+BENCHMARKING simple_select
+                             user     system      total        real
+Avram simple_select      0.865771   0.135182   1.000953 (  2.022358)
+Clear simple_select      2.412488   0.076082   2.488570 (  2.880314)
+Crecto simple_select     1.026289   0.188711   1.215000 (  2.237350)
+Granite simple_select    0.281183   0.063481   0.344664 (  0.684120)
+Jennifer simple_select   0.300742   0.056913   0.357655 (  0.722590)
+BENCHMARKING simple_update
+                             user     system      total        real
+Avram simple_update      0.065531   0.075846   0.141377 (  2.657366)
+Clear simple_update      0.029919   0.077393   0.107312 (  2.413604)
+Crecto simple_update     0.053114   0.039067   0.092181 (  2.749676)
+Granite simple_update    0.032240   0.053979   0.086219 (  2.627631)
+Jennifer simple_update   0.035657   0.042333   0.077990 (  2.801805)
+BENCHMARKING simple_delete
+                             user     system      total        real
+Avram simple_delete      0.035713   0.049531   0.085244 (  2.574109)
+Clear simple_delete      0.049509   0.083932   0.133441 (  2.537720)
+Crecto simple_delete     0.027137   0.047006   0.074143 (  2.335193)
+Granite simple_delete    0.037229   0.064698   0.101927 (  2.423307)
+Jennifer simple_delete   0.036081   0.093909   0.129990 (  2.562659)
+```
 
 ## Motivation / Backstory
 Around 2016 when I started my first crystal project, there was only like 1 or 2 ORM options to choose, but they didn't work well. Your best option was to just use some raw SQL. Now, there's an explosion of ORMs, and too many to choose from. If your app is using [Kemal](http://kemalcr.com/), and you want to use an ORM, which do you choose?

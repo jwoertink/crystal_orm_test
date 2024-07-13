@@ -1,11 +1,16 @@
 require "benchmark"
 require "./orm_test/*"
 
-DATABASE = {host: "localhost", name: "crystal_orm_test", user: "postgres"}
+DATABASE = {
+  host: ENV.fetch("DB_HOST", "localhost"),
+  name: "crystal_orm_test",
+  user: ENV.fetch("DB_USER", "postgres"),
+  pass: ENV.fetch("DB_PASS", ""),
+}
 
 # Enable all once updated
 ENABLED_ORMS = [
-  # "Avram",
+  "Avram",
   "Clear",
   "Crecto",
   "Granite",
