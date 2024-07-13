@@ -26,8 +26,8 @@ This is an ORM comparrison test for crystal. This test will compare a few differ
 
 ## Subjects
 
-1. [Avram](https://github.com/luckyframework/avram)
-1. [Clear](https://github.com/anykeyh/clear)  (currently disabled until support for db 0.10)
+1. [Avram](https://github.com/luckyframework/avram) (currently disabled since it conflicts with Granite)
+1. [Clear](https://github.com/anykeyh/clear)
 1. [Crecto](https://github.com/Crecto/crecto)
 1. [Granite](https://github.com/amberframework/granite)
 1. [Jennifer](https://github.com/imdrasil/jennifer.cr)

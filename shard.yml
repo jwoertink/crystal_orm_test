@@ -4,7 +4,7 @@ version: 0.1.0
 authors:
   - Jeremy Woertink <jeremywoertink@gmail.com>
 
-crystal: 0.35.1
+crystal: 1.22.2
 
 license: MIT
 
@@ -22,8 +22,9 @@ dependencies:
     branch: master
 
   clear:
-    github: anykeyh/clear
-    branch: master
+    # https://github.com/anykeyh/clear/pull/225
+    github: lbguilherme/clear
+    branch: patch-1
 
   avram:
     github: luckyframework/avram
