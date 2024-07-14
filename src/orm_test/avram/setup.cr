@@ -7,7 +7,7 @@ module OrmTestAvram
   end
 
   AppDatabase.configure do |settings|
-    settings.credentials = Avram::Credentials.new(database: DATABASE[:name], username: DATABASE[:user], hostname: DATABASE[:host])
+    settings.credentials = Avram::Credentials.new(database: DATABASE[:name], username: DATABASE[:user], hostname: DATABASE[:host], password: DATABASE[:pass])
   end
 
   Avram.configure do |settings|
@@ -30,13 +30,9 @@ module OrmTestAvram
     end
   end
 
-  class SaveUser < User::SaveOperation
-    permit_columns name
-  end
-
   # INSERT INTO users(name) VALUES(whatever)
   def simple_insert(idx : Int32)
-    SaveUser.create!(
+    User::SaveOperation.create!(
       name: "AvramRecord #{idx}",
       orm: "avram",
       idx: idx
@@ -54,7 +50,7 @@ module OrmTestAvram
   # NOTE: This makes 2 SQL calls. Though it's not "optimized", it's more practical for real world
   def simple_update(idx_value : Int32)
     u = User::BaseQuery.new.orm("avram").idx(idx_value).first
-    SaveUser.update!(u, name: "Avram #{idx_value}")
+    User::SaveOperation.update!(u, name: "Avram #{idx_value}")
   end
 
   # Find user by orm and idx

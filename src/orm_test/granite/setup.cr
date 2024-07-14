@@ -1,8 +1,9 @@
 module OrmTestGranite
   extend self
 
-  Granite::Connections << Granite::Adapter::Pg.new(name: "pg", url: "postgres://#{DATABASE[:user]}@#{DATABASE[:host]}/#{DATABASE[:name]}")
-  #Granite.settings.logger = ::Logger.new(nil)
+  Granite::Connections << Granite::Adapter::Pg.new(name: "pg", url: "postgres://#{DATABASE[:user]}:#{DATABASE[:pass]}@#{DATABASE[:host]}/#{DATABASE[:name]}")
+
+  # Granite.settings.logger = ::Logger.new(nil)
 
   class User < Granite::Base
     extend Granite::Query::BuilderMethods

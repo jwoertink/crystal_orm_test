@@ -1,7 +1,7 @@
 module OrmTestClear
   extend self
 
-  Clear::SQL.init("postgres://#{DATABASE[:user]}@#{DATABASE[:host]}/#{DATABASE[:name]}")
+  Clear::SQL.init("postgres://#{DATABASE[:user]}:#{DATABASE[:pass]}@#{DATABASE[:host]}/#{DATABASE[:name]}")
 
   class User
     include Clear::Model
