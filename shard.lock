@@ -29,6 +29,10 @@ shards:
     git: https://github.com/luckyframework/dexter.git
     version: 0.3.4
 
+  dotenv:
+    git: https://github.com/jgaskins/cr-dotenv.git
+    version: 0.7.1
+
   generate:
     git: https://github.com/anykeyh/generate.cr.git
     version: 0.1.0+git.commit.f5dafc934a70e0ee2f246dddf3df44686f844da2
@@ -52,6 +56,10 @@ shards:
   inflector:
     git: https://github.com/anykeyh/inflector.cr.git
     version: 0.1.8+git.commit.dc5c898b0a834617d8b3ff73ac5a2239bd9fc019
+
+  interro:
+    git: https://github.com/jgaskins/interro.git
+    version: 0.2.6+git.commit.20610b8c18ff1f9ec5a0246f3bed60c5b1f2d19d
 
   jennifer:
     git: https://github.com/imdrasil/jennifer.cr.git

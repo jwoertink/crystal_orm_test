@@ -11,9 +11,10 @@ DATABASE = {
 # Enable all once updated
 ENABLED_ORMS = [
   "Avram",
-  "Clear",
+  # "Clear",
   "Crecto",
   "Granite",
+  "Interro",
   "Jennifer",
   # "OnyxSql",
 ]

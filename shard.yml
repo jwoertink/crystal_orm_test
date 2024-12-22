@@ -33,3 +33,7 @@ dependencies:
   onyx-sql:
     github: onyxframework/sql
     branch: master
+
+  interro:
+    github: jgaskins/interro
+    branch: master

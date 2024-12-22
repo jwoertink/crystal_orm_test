@@ -1,3 +1,3 @@
 require "pg"
-require "clear"
-require "./clear/setup"
+# require "clear"
+# require "./clear/setup"
