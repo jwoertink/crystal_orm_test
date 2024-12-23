@@ -26,22 +26,7 @@ module OrmTestInterro
       OnyxSQL
 
       def to_s
-        case self
-        in .avram?
-          "avram"
-        in .clear?
-          "clear"
-        in .crecto?
-          "crecto"
-        in .granite?
-          "granite"
-        in .interro?
-          "interro"
-        in .jennifer?
-          "jennifer"
-        in .onyx_sql?
-          "onyx_sql"
-        end
+        super.underscore
       end
     end
   end
